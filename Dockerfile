@@ -39,5 +39,5 @@ RUN chown -R app:app /app
 # De-escalate from root privileges with app user.
 USER app
 
-ENTRYPOINT ["/bin/bash", "/app/bin/run"]
+ENTRYPOINT ["/bin/sh", "/app/bin/run"]
 CMD ["dev"]
