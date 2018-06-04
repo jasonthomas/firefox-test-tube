@@ -14,9 +14,8 @@ jobs:
           name: Install Docker Compose
           command: |
             set -x
-            curl -L https://github.com/docker/compose/releases/download/1.19.0/docker-compose-`uname -s`-`uname -m` > ~/docker-compose
-            chmod +x ~/docker-compose
-            mv ~/docker-compose /usr/local/bin/docker-compose
+            apk add --no-cache python3
+            pip3 install docker-compose
 
       - setup_remote_docker
 
